@@ -104,7 +104,7 @@ eval("\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$(document).ready(function () {\r\n    $('.menu__btn').click(function () {\r\n        bodyLock();\r\n        $('.rightside-menu').addClass('fixed');\r\n        $('body').addClass('no-scroll');\r\n    });\r\n    $('.rightside-menu__close').click(function () {\r\n        $('.rightside-menu').removeClass('fixed');\r\n        $('body').removeClass('no-scroll');\r\n        $('body').css('padding-right', '0px');\r\n        $('.lock-padding').css('padding-right', '0px');\r\n    });\r\n\r\n    function bodyLock() {\r\n        let lockPaddingValue = window.innerWidth - $('.wrapper').outerWidth() + 'px';\r\n\r\n        $('.lock-padding').css('padding-right', lockPaddingValue);\r\n        $('body').css('padding-right', lockPaddingValue);\r\n    }\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/header.js?");
+eval("$(document).ready(function () {\r\n    $('.menu__btn').click(function () {\r\n        bodyLock();\r\n        $('.rightside-menu').addClass('fixed');\r\n        $('body').addClass('no-scroll');\r\n    });\r\n    $('.rightside-menu__close').click(function () {\r\n        $('.rightside-menu').removeClass('fixed');\r\n        setTimeout(removeScrollPadding, 400);\r\n    });\r\n\r\n    function bodyLock() {\r\n        let lockPaddingValue = window.innerWidth - $('.wrapper').outerWidth() + 'px';\r\n\r\n        $('.lock-padding').css('padding-right', lockPaddingValue);\r\n        $('body').css('padding-right', lockPaddingValue);\r\n    }\r\n\r\n    function removeScrollPadding() {\r\n        $('body').removeClass('no-scroll');\r\n        $('body').css('padding-right', '0px');\r\n        $('.lock-padding').css('padding-right', '0px');\r\n    }\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/header.js?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("$(document).ready(function () {\r\n    $('.menu__btn').click(function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var mixer = mixitup('.gallery__inner', {\r\n    load: {\r\n        filter: \".living\",\r\n    }\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/mix.js?");
+eval("$(document).ready(function () {\r\n    var mixer = mixitup('.gallery__inner', {\r\n        load: {\r\n            filter: \".living\",\r\n        }\r\n    });\r\n});\r\n\r\n\n\n//# sourceURL=webpack:///./src/assets/js/mix.js?");
 
 /***/ }),
 
@@ -126,7 +126,7 @@ eval("var mixer = mixitup('.gallery__inner', {\r\n    load: {\r\n        filter:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$(document).ready(function () {\r\n    $('.begin__slider').slick({\r\n        dots: true,\r\n        arrows: false,\r\n        fade: true,\r\n        autoplay: true,\r\n        autoplaySpeed: 9000,\r\n    });\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/slider.js?");
+eval("$(document).ready(function () {\r\n    $('.begin__slider').slick({\r\n        dots: true,\r\n        arrows: false,\r\n        fade: true,\r\n        autoplay: true,\r\n        autoplaySpeed: 5000,\r\n        pauseOnFocus: false,\r\n        pauseOnHover: false,\r\n        pauseOnDotsHover: false,\r\n\r\n    });\r\n\r\n    $('.contact-slick').slick({\r\n        dots: true,\r\n        arrows: false,\r\n        autoplay: true,\r\n        autoplaySpeed: 6000,\r\n        easing: 'ease-in',\r\n        graggable: false,\r\n        lazyLoad: 'progressive',\r\n        slidesToShow: 10,\r\n        slidesToScroll: 10,\r\n        pauseOnFocus: false,\r\n        pauseOnHover: false,\r\n        pauseOnDotsHover: false,\r\n    });\r\n\r\n    $('.post-slider__row').slick({\r\n        adaptiveHeight: true,\r\n        prevArrow: '<button type=\"button\" class=\"slick-prev\"><img src=\"assets/images/arrowPrew-slider.svg\" alt=\"\"></button>',\r\n        nextArrow: '<button type=\"button\" class=\"slick-next\"><img src=\"assets/images/arrowNext-slider.svg\" alt=\"\"></button>',\r\n        pauseOnFocus: false,\r\n        pauseOnHover: false,\r\n        pauseOnDotsHover: false,\r\n        autoplay: true,\r\n        autoplaySpeed: 4000,\r\n        easing: 'ease-in',\r\n        graggable: false,\r\n        lazyLoad: 'progressive',\r\n    });\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/slider.js?");
 
 /***/ }),
 
